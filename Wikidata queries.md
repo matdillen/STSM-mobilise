@@ -91,3 +91,77 @@ SELECT * WHERE {
 ```
 
 [Try it](https://w.wiki/8yW) 1138 rows 2019-09-27
+
+## Visualisations
+
+### Citizenship of people with ZooBank author ids
+
+```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT 
+?citizenship ?citizenship_label (COUNT(?citizenship_label) AS ?count) 
+WHERE
+{ 
+    # get people
+	  ?item wdt:P2006 ?zoobank.
+ 
+    # get citizenship
+    ?item rdfs:label ?name .
+    FILTER (lang(?name) = 'en')
+    ?item wdt:P27 ?citizenship .
+    ?citizenship rdfs:label ?citizenship_label .
+    FILTER (lang(?citizenship_label) = 'en')    
+   
+}
+GROUP BY ?citizenship ?citizenship_label
+
+```
+	
+[Try it](https://w.wiki/9Co)
+
+### Gender ratio of people with ZooBank author ids
+
+```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT 
+?gender ?gender_label (COUNT(?gender_label) AS ?count) 
+WHERE
+{ 
+    # get people
+	  ?item wdt:P2006 ?zoobank.
+
+    ?item rdfs:label ?name .
+    FILTER (lang(?name) = 'en')
+    ?item wdt:P21 ?gender .
+    ?gender rdfs:label ?gender_label .
+    FILTER (lang(?gender_label) = 'en')    
+ }
+GROUP BY ?gender ?gender_label
+```
+
+[Try it](https://w.wiki/9Cp)
+
+
+### Birth dates of people with ZooBank author ids
+
+Note that major problem is birth dates are often not precise, and a date of “20th C” gets translated as 1 January 2000, which is of no use.
+
+```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT 
+?item ?name 
+(YEAR(?birth) AS ?year)
+WHERE
+{ 
+    # get people
+	 ?item wdt:P2006 ?zoobank.
+ 
+    ?item rdfs:label ?name .
+    FILTER (lang(?name) = 'en')
+    ?item wdt:P569 ?birth .
+}
+ORDER BY ?year
+```
+
+[Try it](https://w.wiki/9Ct)
+
