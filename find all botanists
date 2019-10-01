@@ -1,0 +1,32 @@
+SELECT ?human ?humanLabel ?yob ?yod ?ISNI ?Harvard ?ORCID ?VIAF ?IPNI
+
+WHERE
+
+{
+  
+#will return duplicated rows for every instance of an id. 
+  
+  {?human wdt:P106 wd:Q2374149.} UNION #with proffession botanist
+  {?human wdt:P586 ?id .}  UNION #with IPNI person identifier
+    #{?human wdt:P106 wd:Q350979 .} UNION # can be expanded by other properties, eg. profession is zoologist
+  {?human wdt:P106 wd:Q18805 .} #profession is naturalist
+    
+  
+  
+	SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" } 
+  
+ #display year of birth and year of death
+  	OPTIONAL { ?human wdt:P569 ?dob . BIND(YEAR(?dob) as ?yob) }
+	OPTIONAL { ?human wdt:P570 ?dod . BIND(YEAR(?dod) as ?yod) }
+ #display some personal identifiers  
+    OPTIONAL { ?human wdt:P213 ?ISNI .}
+    OPTIONAL { ?human wdt:P6264 ?Harvard .}
+    OPTIONAL { ?human wdt:P496 ?ORCID .}
+    OPTIONAL { ?human wdt:P214 ?VIAF .}
+    OPTIONAL { ?human wdt:P586 ?IPNI .}
+}
+
+#Offset the query to continue where you left off
+  #OFFSET 20000
+#Limit the output
+  #LIMIT 2000
