@@ -34,11 +34,11 @@ SELECT * WHERE {
 }
 ```
 
-IPNI with ORCIDs [Try it](https://w.wiki/8yN) 400 rows 2019-09-27
+[Try it](https://w.wiki/8yN) 400 rows 2019-09-27
 
 ### IPNI and Wikispecies
 
-IPNI authors that also have Wikipsecies articles
+IPNI authors that also have Wikispecies articles
 
 ```
 SELECT * WHERE {
