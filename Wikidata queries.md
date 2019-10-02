@@ -165,9 +165,9 @@ ORDER BY ?year
 
 [Try it](https://w.wiki/9Ct)
 
-##Harvard botanist id
+## Harvard botanist id
 
-###Find all items with a Harvard botanist ID
+### Find all items with a Harvard botanist ID
 
 ```
 SELECT * WHERE {
