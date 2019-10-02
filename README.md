@@ -1,6 +1,15 @@
 # Wikidata as a unifying resource for data on collectors of botanical and zoological specimens
 
 Notes on STSM-Mobilise project.
+
+## Objectives
+
+The main objectives of this STSM are:
+- Find the total number of biological specimen collectors in Wikidata. Ideally, this would be done through SPARQL queries which can be replicated afterwards as Wikidata is in constant flux.
+- Assess the comprehensiveness of data on these collectors, using both shape expressions and more in depth analysis in R for specific properties of interest.
+- Describe regional and temporal patterns for these collectors, as well as gender balance and the extent of external links.
+- Data validation by matching through external sources such as Bloodhound.
+
  
 
 ## Useful links
