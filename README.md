@@ -25,6 +25,8 @@ The main objectives of this STSM are:
 
 Penn, M. G., Cafferty, S., & Carine, M. (2017). Mapping the history of botanical collectors: spatial patterns, diversity, and uniqueness through time. Systematics and Biodiversity, 16(1), 1–13. doi:[10.1080/14772000.2017.1355854](https://doi.org/10.1080/14772000.2017.1355854)
 
+Funk, V. A., & Mori, S. A. (1989). A bibliography of plant collectors in Bolivia. Smithsonian Contributions to Botany, (70), 1–20. doi:[10.5479/si.0081024x.70](https://doi.org/10.5479/si.0081024x.70)  also [BHL](https://www.biodiversitylibrary.org/bibliography/131635)
+
 
 
 ## Random thoughts
