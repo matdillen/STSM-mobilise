@@ -165,3 +165,17 @@ ORDER BY ?year
 
 [Try it](https://w.wiki/9Ct)
 
+##Harvard botanist id
+
+###Find all items with a Harvard botanist ID
+
+```
+SELECT * WHERE {
+  ?item wdt:P6264 ?harvard_id.
+  OPTIONAL { 
+    ?article 	schema:about ?item ;
+    schema:isPartOf <https://species.wikimedia.org/> .
+  }
+}
+```
+
