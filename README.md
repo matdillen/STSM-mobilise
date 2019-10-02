@@ -10,6 +10,8 @@ Notes on STSM-Mobilise project.
 [Cyclopaedia of Malesian Collectors](http://www.nationaalherbarium.nl/FMCollectors/home.htm) (see also [github copy](https://github.com/rdmpage/cyclopaedia-malesian-collectors)
 [Shape Expressions Language 2.1](http://shex.io/shex-semantics/)
 
+[Wikidata search for Ernst Cleveland Abbe](https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Ernst%20Cleveland%20Abbe&type=item&format=json&language=en)
+
 
 ## Random thoughts
 
