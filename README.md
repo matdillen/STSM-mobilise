@@ -9,7 +9,6 @@ The main objectives of this STSM are:
 - Assess the comprehensiveness of data on these collectors, using both shape expressions and more in depth analysis in R for specific properties of interest.
 - Describe regional and temporal patterns for these collectors, as well as gender balance and the extent of external links.
 - Data validation by matching through external sources such as Bloodhound.
-
  
 
 ## Useful links
@@ -19,7 +18,46 @@ The main objectives of this STSM are:
 [Cyclopaedia of Malesian Collectors](http://www.nationaalherbarium.nl/FMCollectors/home.htm) (see also [github copy](https://github.com/rdmpage/cyclopaedia-malesian-collectors)
 [Shape Expressions Language 2.1](http://shex.io/shex-semantics/)
 
-[Wikidata search for Ernst Cleveland Abbe](https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Ernst%20Cleveland%20Abbe&type=item&format=json&language=en)
+###  Wikidata API queries
+
+Entity search looks for Wikidata items, tends to find things whose title exactly matches the search term.
+
+[Wikidata entity search for Ernst Cleveland Abbe](https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Ernst%20Cleveland%20Abbe&type=item&format=json&language=en)
+
+srsearch can find approximate matches, but title returned is Wikidata item, not item title. Use ```titlesnippet|snippet``` to get the title (plus search highlighting).
+
+[Wikidata search for Edward Balls](https://www.wikidata.org/w/api.php?action=query&list=search&srsearch=Edward+Balls&srprop=titlesnippet%7Csnippet&format=json)
+```
+{
+	"batchcomplete": "",
+	"query": {
+		"searchinfo": {
+			"totalhits": 3
+		},
+		"search": [{
+			"ns": 0,
+			"title": "Q260464",
+			"pageid": 252675,
+			"snippet": "British politician",
+			"titlesnippet": "Ed <span class=\"searchmatch\">Balls</span>"
+		}, {
+			"ns": 0,
+			"title": "Q21505603",
+			"pageid": 23550326,
+			"snippet": "botanist (1892-1984)",
+			"titlesnippet": "<span class=\"searchmatch\">Edward</span> Kent <span class=\"searchmatch\">Balls</span>"
+		}, {
+			"ns": 0,
+			"title": "Q56920165",
+			"pageid": 56837127,
+			"snippet": "",
+			"titlesnippet": "The moral status of animals and the Animals (Scientific Procedures) Act 1986"
+		}]
+	}
+}
+```
+
+
 
 ## Reading
 
