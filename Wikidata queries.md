@@ -179,3 +179,14 @@ SELECT * WHERE {
 }
 ```
 
+## botanical collectors
+
+### Find all items with occupation of botanical collector
+
+```
+SELECT * WHERE {
+  ?item wdt:P106 wd:Q2083925.
+  }
+```
+
+Only 388 results!
