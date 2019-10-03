@@ -165,3 +165,28 @@ ORDER BY ?year
 
 [Try it](https://w.wiki/9Ct)
 
+## Harvard botanist id
+
+### Find all items with a Harvard botanist ID
+
+```
+SELECT * WHERE {
+  ?item wdt:P6264 ?harvard_id.
+  OPTIONAL { 
+    ?article 	schema:about ?item ;
+    schema:isPartOf <https://species.wikimedia.org/> .
+  }
+}
+```
+
+## botanical collectors
+
+### Find all items with occupation of botanical collector
+
+```
+SELECT * WHERE {
+  ?item wdt:P106 wd:Q2083925.
+  }
+```
+
+Only 388 results!
