@@ -1,9 +1,11 @@
+## Select all biologists that have IPNI, Harvard, Zoobank, BHL creator IDs or are humans with a Wikispecies article
+```
 SELECT ?item ?itemLabel ?yob ?yod ?ipni ?harvard ?zoo ?bhl WHERE {
   {?item wdt:P586 ?id.} UNION #ipni
   {?item wdt:P6264 ?id.} UNION #harvard
   {?item wdt:P2006 ?id.} UNION #zoobank
   {?item wdt:P4081 ?id.} UNION #bhl
-  {?article schema:about ?item ; #wikispecies
+  {?article schema:about ?human ; #wikispecies
             schema:isPartOf <https://species.wikimedia.org/> .
    } UNION
   {?item wdt:P4081 ?bhl_id.}
@@ -14,3 +16,4 @@ SELECT ?item ?itemLabel ?yob ?yod ?ipni ?harvard ?zoo ?bhl WHERE {
     OPTIONAL { ?item wdt:P2006 ?zoo .}
     OPTIONAL { ?item wdt:P4081 ?bhl .}
 }
+```
