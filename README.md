@@ -21,6 +21,8 @@ The main objectives of this STSM are:
 
 [Wikidata search for Ernst Cleveland Abbe](https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Ernst%20Cleveland%20Abbe&type=item&format=json&language=en)
 
+[Other method of wikipedia search, for Ed Balls - seems to be quite slower](https://www.wikidata.org/w/api.php?action=query&list=search&srsearch=Edward+Balls&srprop=titlesnippet%7Csnippet&format=json)
+
 ## Reading
 
 Penn, M. G., Cafferty, S., & Carine, M. (2017). Mapping the history of botanical collectors: spatial patterns, diversity, and uniqueness through time. Systematics and Biodiversity, 16(1), 1–13. doi:[10.1080/14772000.2017.1355854](https://doi.org/10.1080/14772000.2017.1355854)
