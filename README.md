@@ -61,6 +61,13 @@ srsearch can find approximate matches, but title returned is Wikidata item, not 
 
 [Other method of wikipedia search, for Ed Balls - seems to be quite slower](https://www.wikidata.org/w/api.php?action=query&list=search&srsearch=Edward+Balls&srprop=titlesnippet%7Csnippet&format=json)
 
+## Other APIs
+
+- [ZooBank](http://zoobank.org/Api)
+- [BHL](https://about.biodiversitylibrary.org/tools-and-services/developer-and-data-tools/#APIs) Note that you need a developer key
+- [IPNI (beta)](https://beta.ipni.org/api/1/a/urn:lsid:ipni.org:authors:20009115-1)
+
+
 ## Reading
 
 Penn, M. G., Cafferty, S., & Carine, M. (2017). Mapping the history of botanical collectors: spatial patterns, diversity, and uniqueness through time. Systematics and Biodiversity, 16(1), 1–13. doi:[10.1080/14772000.2017.1355854](https://doi.org/10.1080/14772000.2017.1355854)
