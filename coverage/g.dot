@@ -1,0 +1,56 @@
+
+
+graph G {
+  node_ipni [shape=circle,fillcolor="yellow",style=filled,label="ipni\n46727",fixedsize=true,width="1"];
+
+
+  node_bhl [shape=circle,fillcolor="yellow",style=filled,label="bhl\n26645",fixedsize=true,width="1"];
+
+
+  node_bhl_ipni [shape=circle,fillcolor="yellow",style=filled,label="6884",fixedsize=true,width="0.5"];
+
+  node_zoobank [shape=circle,fillcolor="yellow",style=filled,label="zoobank\n15864",fixedsize=true,width="1"];
+  
+  node_orcid [shape=circle,fillcolor="yellow",style=filled,label="ORCID\nmany",fixedsize=true,width="1"];
+  
+  node_bhl_orcid [shape=circle,fillcolor="yellow",style=filled,label="722",fixedsize=true,width="0.5"];
+  node_ipni_orcid [shape=circle,fillcolor="yellow",style=filled,label="407",fixedsize=true,width="0.5"];
+
+
+  node_bhl_zoobank [shape=circle,fillcolor="yellow",style=filled,label="3590",fixedsize=true,width="0.5"];
+  node_orcid_zoobank [shape=circle,fillcolor="yellow",style=filled,label="1141",fixedsize=true,width="0.5"];
+
+ 
+  node_bhl_ipni_orcid [shape=circle,fillcolor="yellow",style=filled,label="97",fixedsize=true,width="0.5"];
+
+  
+  /*
+    [["ipni"]] => 46727
+    [["orcid"]] => 514171
+    [["bhl"]] => 26645
+    [["zoobank"]] => 15864
+    [["ipni","orcid"]] => 407
+    [["orcid","zoobank"]] => 1141
+    [["bhl","ipni"]] => 6884
+    [["bhl","zoobank"]] => 3590
+    [["bhl","orcid"]] => 722
+    [["bhl","ipni","orcid"]] => 97
+  */
+
+ node_ipni -- node_bhl_ipni -- node_bhl;
+ 
+ node_orcid -- node_bhl_orcid -- node_bhl;
+ 
+ node_zoobank -- node_bhl_zoobank -- node_bhl;
+ node_zoobank -- node_orcid_zoobank -- node_orcid;
+ 
+ node_ipni -- node_ipni_orcid -- node_orcid;
+ 
+ 
+ node_ipni_orcid -- node_bhl_ipni_orcid;
+ node_bhl_orcid -- node_bhl_ipni_orcid;
+ node_bhl_ipni -- node_bhl_ipni_orcid;
+ 
+	
+
+}
