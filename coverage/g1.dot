@@ -1,0 +1,82 @@
+
+
+graph G {
+  node_ipni [shape=circle,fillcolor="yellow",style=filled,label="ipni\n46727",fixedsize=true,width="1"];
+
+
+  node_bhl [shape=circle,fillcolor="yellow",style=filled,label="bhl\n26645",fixedsize=true,width="1"];
+
+
+  node_bhl_ipni [shape=circle,fillcolor="yellow",style=filled,label="bhl ipni\n6884",fixedsize=true,width="0.5"];
+
+  node_zoobank [shape=circle,fillcolor="yellow",style=filled,label="zoobank\n15864",fixedsize=true,width="1"];
+  
+
+
+  node_bhl_zoobank [shape=circle,fillcolor="yellow",style=filled,label="bhl zoobank\n3590",fixedsize=true,width="0.5"];
+
+  node_ipni_zoobank [shape=circle,fillcolor="yellow",style=filled,label="ipni zoobank\nxxxx",fixedsize=true,width="0.5"];
+
+
+  node_ent [shape=circle,fillcolor="yellow",style=filled,label="ent\n10000",fixedsize=true,width="1"];
+  node_bhl_ent [shape=circle,fillcolor="yellow",style=filled,label="bhl ent\nxxx",fixedsize=true,width="0.5"];
+  node_ent_zoobank [shape=circle,fillcolor="yellow",style=filled,label="ent z\nxxx",fixedsize=true,width="0.5"];
+
+  node_harvard [shape=circle,fillcolor="yellow",style=filled,label="harvard\n10000",fixedsize=true,width="1"];
+  node_bhl_harvard [shape=circle,fillcolor="yellow",style=filled,label="bhl harvard\nxxx",fixedsize=true,width="0.5"];
+  node_ipni_harvard [shape=circle,fillcolor="yellow",style=filled,label="ipni harvard\nxxx",fixedsize=true,width="0.5"];
+
+  node_wikisp [shape=circle,fillcolor="yellow",style=filled,label="wikisp\n10000",fixedsize=true,width="1"];
+  node_wikisp_zoobank[shape=circle,fillcolor="yellow",style=filled,label="wikisp zoobank\nxxx",fixedsize=true,width="0.5"];
+  node_ipni_wikisp [shape=circle,fillcolor="yellow",style=filled,label="ipni wikisp\nxxx",fixedsize=true,width="0.5"];
+
+/*
+  node_bhl_wikisp [shape=circle,fillcolor="yellow",style=filled,label="bhl wikisp\nxxx",fixedsize=true,width="0.5"];
+
+*/
+  
+  /*
+    [["ipni"]] => 46727
+    [["orcid"]] => 514171
+    [["bhl"]] => 26645
+    [["zoobank"]] => 15864
+    [["ipni","orcid"]] => 407
+    [["orcid","zoobank"]] => 1141
+    [["bhl","ipni"]] => 6884
+    [["bhl","zoobank"]] => 3590
+    [["bhl","orcid"]] => 722
+    [["bhl","ipni","orcid"]] => 97
+  */
+
+ node_ipni -- node_bhl_ipni -- node_bhl;
+ 
+ 
+ node_zoobank -- node_bhl_zoobank -- node_bhl;
+ 
+ node_zoobank -- node_ipni_zoobank -- node_ipni;
+ 
+ node_ipni -- node_ipni_harvard -- node_harvard;
+ node_bhl -- node_bhl_harvard -- node_harvard;
+ 
+ 
+ node_ent -- node_ent_zoobank -- node_zoobank;
+ node_bhl-- node_bhl_ent -- node_ent;
+
+ 
+ node_wikisp -- node_wikisp_zoobank -- node_zoobank;
+ node_ipni-- node_ipni_wikisp -- node_wikisp;
+
+/*
+ node_bhl-- node_bhl_wikisp -- node_wikisp;
+ 
+ */
+ 
+ /*
+ 
+ 
+  node_bhl_zoobank -- node_ipni_zoobank -- node_bhl_ipni;*/
+
+ 
+	
+
+}
