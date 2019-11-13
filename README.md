@@ -1,6 +1,6 @@
 # Wikidata as a unifying resource for data on collectors of botanical and zoological specimens
 
-Notes on STSM-Mobilise project.
+Notes on STSM-Mobilise project. For the final output of this project, see https://github.com/matdillen/STSM-wikidata-people
 
 ## Objectives
 
